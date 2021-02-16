@@ -19,7 +19,7 @@ namespace Thesis
 
         private void buttonCypher_Click(object sender, EventArgs e)
         {
-            string OriginalText = textBoxOriginal.Text.ToUpper().Trim();
+            string OriginalText = textBoxOriginal.Text.ToUpper().Replace(" ", ""); ;
 
             string Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ.,'";
             /*
@@ -57,9 +57,11 @@ namespace Thesis
             string outputAffine = Affin.Encryption_Affine(OriginalText, Alphabet, MatrixA, VectorS);//OriginalText->outputMatr
             string outputElliptic = Elliptic.EllipticEncryption(outputAffine, Alphabet, nA, nB, p, b, c, G);
             textBoxResult.Text = outputElliptic;
+            //textBoxResult.Text = outputAffine;
         }
 
         private void buttonDecypher_Click(object sender, EventArgs e)
+
         {
             string OriginalText = textBoxOriginal.Text.ToUpper().Trim();
 

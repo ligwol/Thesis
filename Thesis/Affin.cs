@@ -51,6 +51,8 @@ namespace Thesis
 
             //НЕправильно добавляются лишние символы (вообще не добавляются)
             int TextLenght = 0;
+
+            
             if (OriginalText.Length % 3 == 2) { TextLenght = OriginalText.Length + 1; }
             else
             {
@@ -101,6 +103,7 @@ namespace Thesis
                 Encrypted_Affine[i + 2] = Alphabet[Mod(A[6] * t[0] + A[7] * t[1] + A[8] * t[2], Alphabet.Length)];
             }
 
+            //string result = string.Join("", Text);
             string result = string.Join("", Encrypted_Affine);
             return result;
         }
