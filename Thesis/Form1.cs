@@ -43,8 +43,20 @@ namespace Thesis
             int S1 = 1, S2 = 2, S3 = 3;
             int[] VectorS = { S1, S2, S3 };     // vector S
 
+            /*
+            int.TryParse(textBoxNa.Text, out int nA); //nA=2
+            int.TryParse(textBoxNb.Text, out int nB); //nB=3
+            int.TryParse(textBoxP.Text, out int p); //p=211
+            int.TryParse(textBoxB.Text, out int b); //b=0
+            int.TryParse(textBoxC.Text, out int c); //c=-4
+            int.TryParse(textBoxG0.Text, out int G0); //G0=2
+            int.TryParse(textBoxG1.Text, out int G1); //G1=2*/
+            int nA = 2, nB = 3, p = 211, b = 0, c = -4, G0 = 2, G1 = 2;
+            int[] G = { G0, G1 };
+
             string outputAffine = Affin.Encryption_Affine(OriginalText, Alphabet, MatrixA, VectorS);//OriginalText->outputMatr
-            textBoxResult.Text = outputAffine;
+            string outputElliptic = Elliptic.EllipticEncryption(outputAffine, Alphabet, nA, nB, p, b, c, G);
+            textBoxResult.Text = outputElliptic;
         }
 
         private void buttonDecypher_Click(object sender, EventArgs e)
@@ -73,7 +85,19 @@ namespace Thesis
             int S1 = 1, S2 = 2, S3 = 3;
             int[] VectorS = { S1, S2, S3 };     // vector S
 
-            string outputAffine = Affin.Decryption_Affine(OriginalText, Alphabet, MatrixA, VectorS);
+            /*
+            int.TryParse(textBoxNa.Text, out int nA); //nA=2
+            int.TryParse(textBoxNb.Text, out int nB); //nB=3
+            int.TryParse(textBoxP.Text, out int p); //p=211
+            int.TryParse(textBoxB.Text, out int b); //b=0
+            int.TryParse(textBoxC.Text, out int c); //c=-4
+            int.TryParse(textBoxG0.Text, out int G0); //G0=2
+            int.TryParse(textBoxG1.Text, out int G1); //G1=2*/
+            int nA = 2, nB = 3, p = 211, b = 0, c = -4, G0 = 2, G1 = 2;
+            int[] G = { G0, G1 };
+
+            string outputElliptic = Elliptic.EllipticDecryption(OriginalText, Alphabet, nB, b, p);
+            string outputAffine = Affin.Decryption_Affine(outputElliptic, Alphabet, MatrixA, VectorS);
             textBoxResult.Text = outputAffine;
         }
     }

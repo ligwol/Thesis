@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Affin.cs" />
+    <Compile Include="Elliptic.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
