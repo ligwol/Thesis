@@ -125,6 +125,7 @@ namespace Thesis
             this.buttonCypher.TabIndex = 4;
             this.buttonCypher.Text = "Cypher";
             this.buttonCypher.UseVisualStyleBackColor = true;
+            this.buttonCypher.Click += new System.EventHandler(this.buttonCypher_Click);
             // 
             // buttonDecypher
             // 
@@ -135,6 +136,7 @@ namespace Thesis
             this.buttonDecypher.TabIndex = 5;
             this.buttonDecypher.Text = "Decypher";
             this.buttonDecypher.UseVisualStyleBackColor = true;
+            this.buttonDecypher.Click += new System.EventHandler(this.buttonDecypher_Click);
             // 
             // panel1
             // 
