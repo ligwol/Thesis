@@ -48,8 +48,6 @@ namespace Thesis
         {
             int[] t = new int[3];
             int t1 = 0, t2 = 0, t3 = 0;
-
-            //НЕправильно добавляются лишние символы (вообще не добавляются)
             int TextLenght = 0;
 
             

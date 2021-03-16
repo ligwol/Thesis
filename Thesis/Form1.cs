@@ -19,9 +19,9 @@ namespace Thesis
 
         private void buttonCypher_Click(object sender, EventArgs e)
         {
-            string OriginalText = textBoxOriginal.Text.ToUpper().Replace(" ", ""); ;
+            string originalText = textBoxOriginal.Text.ToUpper().Replace(" ", ""); ;
 
-            string Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ.,'";
+            string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ.,'";
             /*
             int.TryParse(textBoxA11.Text, out int A11); //a11=5
             int.TryParse(textBoxA12.Text, out int A12); //a12=4
@@ -54,8 +54,8 @@ namespace Thesis
             int nA = 2, nB = 3, p = 211, b = 0, c = -4, G0 = 2, G1 = 2;
             int[] G = { G0, G1 };
 
-            string outputAffine = Affin.Encryption_Affine(OriginalText, Alphabet, MatrixA, VectorS);//OriginalText->outputMatr
-            string outputElliptic = Elliptic.EllipticEncryption(outputAffine, Alphabet, nA, nB, p, b, c, G);
+            string outputAffine = Affin.Encryption_Affine(originalText, alphabet, MatrixA, VectorS);//originalText->outputMatr
+            string outputElliptic = Elliptic.EllipticEncryption(outputAffine, alphabet, nA, nB, p, b, c, G);
             textBoxResult.Text = outputElliptic;
             //textBoxResult.Text = outputAffine;
         }
@@ -63,9 +63,9 @@ namespace Thesis
         private void buttonDecypher_Click(object sender, EventArgs e)
 
         {
-            string OriginalText = textBoxOriginal.Text.ToUpper().Trim();
+            string originalText = textBoxOriginal.Text.ToUpper().Trim();
 
-            string Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ.,'";
+            string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ.,'";
             /*
             int.TryParse(textBoxA11.Text, out int A11); //a11=5
             int.TryParse(textBoxA12.Text, out int A12); //a12=4
@@ -98,9 +98,17 @@ namespace Thesis
             int nA = 2, nB = 3, p = 211, b = 0, c = -4, G0 = 2, G1 = 2;
             int[] G = { G0, G1 };
 
-            string outputElliptic = Elliptic.EllipticDecryption(OriginalText, Alphabet, nB, b, p);
-            string outputAffine = Affin.Decryption_Affine(outputElliptic, Alphabet, MatrixA, VectorS);
+            string outputElliptic = Elliptic.EllipticDecryption(originalText, alphabet, nB, b, p);
+            string outputAffine = Affin.Decryption_Affine(outputElliptic, alphabet, MatrixA, VectorS);
             textBoxResult.Text = outputAffine;
+        }
+
+        private void buttonHash_Click(object sender, EventArgs e)
+        {
+            string originalText = textBoxOriginal.Text.ToUpper().Trim();
+            string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ.,'";
+            string outputHash = Hash.makingHash(originalText, alphabet);
+            textBoxHash.Text = outputHash;
         }
     }
 }
