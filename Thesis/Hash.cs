@@ -23,11 +23,11 @@ namespace Thesis
             }
             return n1;
         }
-        public static string makingHash(string original, string alphabet)
+        public static string makingHash(string original)
         {
             //Преобразование исходного текста в числа из алфавита
             uint[] originalNumbers = new uint[original.Length];
-            for (int i = 0; i < original.Length; i++)
+            /*for (int i = 0; i < original.Length; i++)
             {
                 for (int j = 0; j < alphabet.Length; j++)
                 {
@@ -36,7 +36,12 @@ namespace Thesis
                         originalNumbers[i] = (uint)j;
                     }
                 }
+            }*/
+            for (int i=0; i<original.Length; i++)
+            {
+                originalNumbers[i] = (uint)original[i];
             }
+
 
             //Добавление чисел для полноты блока в 16 байт
             int indexNumbers = original.Length % 16; //количество символов в тексте
@@ -118,11 +123,11 @@ namespace Thesis
                     }
                 }
             }
-            h[0] = Mod(Mod(A, (uint)alphabet.Length) + Mod(a, (uint)alphabet.Length), (uint)alphabet.Length);
-            h[1] = Mod(Mod(B, (uint)alphabet.Length) + Mod(b, (uint)alphabet.Length), (uint)alphabet.Length);
-            h[2] = Mod(Mod(C, (uint)alphabet.Length) + Mod(c, (uint)alphabet.Length), (uint)alphabet.Length);
-            h[3] = Mod(Mod(D, (uint)alphabet.Length) + Mod(d, (uint)alphabet.Length), (uint)alphabet.Length);
-            h[4] = Mod(Mod(E, (uint)alphabet.Length) + Mod(e, (uint)alphabet.Length), (uint)alphabet.Length);
+            h[0] = Mod(Mod(A, 256) + Mod(a, 256), 256);
+            h[1] = Mod(Mod(B, 256) + Mod(b, 256), 256);
+            h[2] = Mod(Mod(C, 256) + Mod(c, 256), 256);
+            h[3] = Mod(Mod(D, 256) + Mod(d, 256), 256);
+            h[4] = Mod(Mod(E, 256) + Mod(e, 256), 256);
                         
             for (uint i = 0; i < blockNumbers; i++)
             {
@@ -139,11 +144,11 @@ namespace Thesis
                 }
             }
 
-            h[5] = Mod(Mod(A, (uint)alphabet.Length) + Mod(a, (uint)alphabet.Length), (uint)alphabet.Length);
-            h[6] = Mod(Mod(B, (uint)alphabet.Length) + Mod(b, (uint)alphabet.Length), (uint)alphabet.Length);
-            h[7] = Mod(Mod(C, (uint)alphabet.Length) + Mod(c, (uint)alphabet.Length), (uint)alphabet.Length);
-            h[8] = Mod(Mod(D, (uint)alphabet.Length) + Mod(d, (uint)alphabet.Length), (uint)alphabet.Length);
-            h[9] = Mod(Mod(E, (uint)alphabet.Length) + Mod(e, (uint)alphabet.Length), (uint)alphabet.Length);
+            h[5] = Mod(Mod(A, 256) + Mod(a, 256), 256);
+            h[6] = Mod(Mod(B, 256) + Mod(b, 256), 256);
+            h[7] = Mod(Mod(C, 256) + Mod(c, 256), 256);
+            h[8] = Mod(Mod(D, 256) + Mod(d, 256), 256);
+            h[9] = Mod(Mod(E, 256) + Mod(e, 256), 256);
 
             for (uint i = 0; i < blockNumbers; i++)
             {
@@ -160,11 +165,11 @@ namespace Thesis
                 }
             }
 
-            h[10] = Mod(Mod(A, (uint)alphabet.Length) + Mod(a, (uint)alphabet.Length), (uint)alphabet.Length);
-            h[11] = Mod(Mod(B, (uint)alphabet.Length) + Mod(b, (uint)alphabet.Length), (uint)alphabet.Length);
-            h[12] = Mod(Mod(C, (uint)alphabet.Length) + Mod(c, (uint)alphabet.Length), (uint)alphabet.Length);
-            h[13] = Mod(Mod(D, (uint)alphabet.Length) + Mod(d, (uint)alphabet.Length), (uint)alphabet.Length);
-            h[14] = Mod(Mod(E, (uint)alphabet.Length) + Mod(e, (uint)alphabet.Length), (uint)alphabet.Length);
+            h[10] = Mod(Mod(A, 256) + Mod(a, 256), 256);
+            h[11] = Mod(Mod(B, 256) + Mod(b, 256), 256);
+            h[12] = Mod(Mod(C, 256) + Mod(c, 256), 256);
+            h[13] = Mod(Mod(D, 256) + Mod(d, 256), 256);
+            h[14] = Mod(Mod(E, 256) + Mod(e, 256), 256);
 
             for (uint i = 0; i < blockNumbers; i++)
             {
@@ -181,11 +186,11 @@ namespace Thesis
                 }
             }
 
-            h[15] = Mod(Mod(A, (uint)alphabet.Length) + Mod(a, (uint)alphabet.Length), (uint)alphabet.Length);
-            h[16] = Mod(Mod(B, (uint)alphabet.Length) + Mod(b, (uint)alphabet.Length), (uint)alphabet.Length);
-            h[17] = Mod(Mod(C, (uint)alphabet.Length) + Mod(c, (uint)alphabet.Length), (uint)alphabet.Length);
-            h[18] = Mod(Mod(D, (uint)alphabet.Length) + Mod(d, (uint)alphabet.Length), (uint)alphabet.Length);
-            h[19] = Mod(Mod(E, (uint)alphabet.Length) + Mod(e, (uint)alphabet.Length), (uint)alphabet.Length);
+            h[15] = Mod(Mod(A, 256) + Mod(a, 256), 256);
+            h[16] = Mod(Mod(B, 256) + Mod(b, 256), 256);
+            h[17] = Mod(Mod(C, 256) + Mod(c, 256), 256);
+            h[18] = Mod(Mod(D, 256) + Mod(d, 256), 256);
+            h[19] = Mod(Mod(E, 256) + Mod(e, 256), 256);
             //
             //Вывод двумерного массива с числами в текстовый файл
             //StreamWriter sw = new StreamWriter("d:\\array.txt");
@@ -211,8 +216,15 @@ namespace Thesis
                 hex += tp;
             }
 
+            /*string hex = "";
+            for (int i = 1; i < 8; i++)
+            {
+                hex += hexLong[8 * i - 1] + hexLong[8 * i];
+            }*/
 
-            string result = string.Join(" ", hex);
+            hex = hex.Replace("00", "");
+
+            string result = string.Join("", "0x" + hex);
             return result;//sizeNumbers.ToString();
         }
     }

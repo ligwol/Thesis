@@ -39,8 +39,6 @@ namespace Thesis
             this.panelResult = new System.Windows.Forms.Panel();
             this.panelOriginal = new System.Windows.Forms.Panel();
             this.groupBoxKeys = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxB = new System.Windows.Forms.TextBox();
             this.groupBoxUserKeys = new System.Windows.Forms.GroupBox();
             this.Nblabel1 = new System.Windows.Forms.Label();
             this.labelNa = new System.Windows.Forms.Label();
@@ -51,27 +49,26 @@ namespace Thesis
             this.textBoxG1 = new System.Windows.Forms.TextBox();
             this.groupBoxP = new System.Windows.Forms.GroupBox();
             this.textBoxP = new System.Windows.Forms.TextBox();
-            this.textBoxC = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBoxS = new System.Windows.Forms.GroupBox();
             this.textBoxS1 = new System.Windows.Forms.TextBox();
             this.textBoxS3 = new System.Windows.Forms.TextBox();
             this.textBoxS2 = new System.Windows.Forms.TextBox();
             this.groupBoxA = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBoxA23 = new System.Windows.Forms.TextBox();
+            this.textBoxA33 = new System.Windows.Forms.TextBox();
             this.textBoxA11 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxA32 = new System.Windows.Forms.TextBox();
+            this.textBoxA12 = new System.Windows.Forms.TextBox();
+            this.textBoxA31 = new System.Windows.Forms.TextBox();
+            this.textBoxA13 = new System.Windows.Forms.TextBox();
+            this.textBoxA21 = new System.Windows.Forms.TextBox();
+            this.textBoxA22 = new System.Windows.Forms.TextBox();
             this.buttonCleanText = new System.Windows.Forms.Button();
             this.buttonCleanAll = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.buttonHash = new System.Windows.Forms.Button();
             this.textBoxHash = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.labelHash = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelResult.SuspendLayout();
             this.panelOriginal.SuspendLayout();
@@ -82,6 +79,7 @@ namespace Thesis
             this.groupBoxS.SuspendLayout();
             this.groupBoxA.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelOriginal
@@ -107,7 +105,7 @@ namespace Thesis
             this.textBoxResult.Location = new System.Drawing.Point(6, 19);
             this.textBoxResult.Multiline = true;
             this.textBoxResult.Name = "textBoxResult";
-            this.textBoxResult.Size = new System.Drawing.Size(247, 112);
+            this.textBoxResult.Size = new System.Drawing.Size(383, 77);
             this.textBoxResult.TabIndex = 3;
             // 
             // labelResult
@@ -123,7 +121,7 @@ namespace Thesis
             // buttonCypher
             // 
             this.buttonCypher.Font = new System.Drawing.Font("Gadugi", 9.75F);
-            this.buttonCypher.Location = new System.Drawing.Point(6, 310);
+            this.buttonCypher.Location = new System.Drawing.Point(6, 150);
             this.buttonCypher.Name = "buttonCypher";
             this.buttonCypher.Size = new System.Drawing.Size(92, 47);
             this.buttonCypher.TabIndex = 4;
@@ -134,7 +132,7 @@ namespace Thesis
             // buttonDecypher
             // 
             this.buttonDecypher.Font = new System.Drawing.Font("Gadugi", 9.75F);
-            this.buttonDecypher.Location = new System.Drawing.Point(167, 310);
+            this.buttonDecypher.Location = new System.Drawing.Point(167, 150);
             this.buttonDecypher.Name = "buttonDecypher";
             this.buttonDecypher.Size = new System.Drawing.Size(92, 47);
             this.buttonDecypher.TabIndex = 5;
@@ -144,21 +142,20 @@ namespace Thesis
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panelResult);
             this.panel1.Controls.Add(this.buttonDecypher);
             this.panel1.Controls.Add(this.buttonCypher);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(269, 365);
+            this.panel1.Size = new System.Drawing.Size(269, 205);
             this.panel1.TabIndex = 6;
             // 
             // panelResult
             // 
             this.panelResult.Controls.Add(this.textBoxResult);
             this.panelResult.Controls.Add(this.labelResult);
-            this.panelResult.Location = new System.Drawing.Point(6, 150);
+            this.panelResult.Location = new System.Drawing.Point(265, 3);
             this.panelResult.Name = "panelResult";
-            this.panelResult.Size = new System.Drawing.Size(260, 138);
+            this.panelResult.Size = new System.Drawing.Size(392, 99);
             this.panelResult.TabIndex = 8;
             // 
             // panelOriginal
@@ -172,38 +169,18 @@ namespace Thesis
             // 
             // groupBoxKeys
             // 
-            this.groupBoxKeys.Controls.Add(this.label1);
-            this.groupBoxKeys.Controls.Add(this.textBoxB);
             this.groupBoxKeys.Controls.Add(this.groupBoxUserKeys);
             this.groupBoxKeys.Controls.Add(this.groupBoxG);
             this.groupBoxKeys.Controls.Add(this.groupBoxP);
-            this.groupBoxKeys.Controls.Add(this.textBoxC);
-            this.groupBoxKeys.Controls.Add(this.label2);
             this.groupBoxKeys.Controls.Add(this.groupBoxS);
             this.groupBoxKeys.Controls.Add(this.groupBoxA);
             this.groupBoxKeys.Font = new System.Drawing.Font("Gadugi", 9.75F);
             this.groupBoxKeys.Location = new System.Drawing.Point(300, 12);
             this.groupBoxKeys.Name = "groupBoxKeys";
-            this.groupBoxKeys.Size = new System.Drawing.Size(204, 304);
+            this.groupBoxKeys.Size = new System.Drawing.Size(375, 144);
             this.groupBoxKeys.TabIndex = 8;
             this.groupBoxKeys.TabStop = false;
             this.groupBoxKeys.Text = "KEYS";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(80, 272);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 16);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "x + ";
-            // 
-            // textBoxB
-            // 
-            this.textBoxB.Location = new System.Drawing.Point(55, 269);
-            this.textBoxB.Name = "textBoxB";
-            this.textBoxB.Size = new System.Drawing.Size(25, 25);
-            this.textBoxB.TabIndex = 21;
             // 
             // groupBoxUserKeys
             // 
@@ -211,7 +188,7 @@ namespace Thesis
             this.groupBoxUserKeys.Controls.Add(this.labelNa);
             this.groupBoxUserKeys.Controls.Add(this.textBoxNb);
             this.groupBoxUserKeys.Controls.Add(this.textBoxNa);
-            this.groupBoxUserKeys.Location = new System.Drawing.Point(16, 142);
+            this.groupBoxUserKeys.Location = new System.Drawing.Point(197, 24);
             this.groupBoxUserKeys.Name = "groupBoxUserKeys";
             this.groupBoxUserKeys.Size = new System.Drawing.Size(172, 63);
             this.groupBoxUserKeys.TabIndex = 20;
@@ -242,6 +219,7 @@ namespace Thesis
             this.textBoxNb.Name = "textBoxNb";
             this.textBoxNb.Size = new System.Drawing.Size(37, 25);
             this.textBoxNb.TabIndex = 13;
+            this.textBoxNb.Text = "3";
             // 
             // textBoxNa
             // 
@@ -249,12 +227,13 @@ namespace Thesis
             this.textBoxNa.Name = "textBoxNa";
             this.textBoxNa.Size = new System.Drawing.Size(37, 25);
             this.textBoxNa.TabIndex = 8;
+            this.textBoxNa.Text = "2";
             // 
             // groupBoxG
             // 
             this.groupBoxG.Controls.Add(this.textBoxG0);
             this.groupBoxG.Controls.Add(this.textBoxG1);
-            this.groupBoxG.Location = new System.Drawing.Point(88, 207);
+            this.groupBoxG.Location = new System.Drawing.Point(269, 89);
             this.groupBoxG.Name = "groupBoxG";
             this.groupBoxG.Size = new System.Drawing.Size(100, 50);
             this.groupBoxG.TabIndex = 9;
@@ -267,6 +246,7 @@ namespace Thesis
             this.textBoxG0.Name = "textBoxG0";
             this.textBoxG0.Size = new System.Drawing.Size(37, 25);
             this.textBoxG0.TabIndex = 17;
+            this.textBoxG0.Text = "2";
             // 
             // textBoxG1
             // 
@@ -274,11 +254,12 @@ namespace Thesis
             this.textBoxG1.Name = "textBoxG1";
             this.textBoxG1.Size = new System.Drawing.Size(37, 25);
             this.textBoxG1.TabIndex = 19;
+            this.textBoxG1.Text = "2";
             // 
             // groupBoxP
             // 
             this.groupBoxP.Controls.Add(this.textBoxP);
-            this.groupBoxP.Location = new System.Drawing.Point(16, 207);
+            this.groupBoxP.Location = new System.Drawing.Point(197, 89);
             this.groupBoxP.Name = "groupBoxP";
             this.groupBoxP.Size = new System.Drawing.Size(52, 50);
             this.groupBoxP.TabIndex = 10;
@@ -291,22 +272,7 @@ namespace Thesis
             this.textBoxP.Name = "textBoxP";
             this.textBoxP.Size = new System.Drawing.Size(37, 25);
             this.textBoxP.TabIndex = 19;
-            // 
-            // textBoxC
-            // 
-            this.textBoxC.Location = new System.Drawing.Point(111, 269);
-            this.textBoxC.Name = "textBoxC";
-            this.textBoxC.Size = new System.Drawing.Size(25, 25);
-            this.textBoxC.TabIndex = 9;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 272);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 16);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "y = x + ";
+            this.textBoxP.Text = "701";
             // 
             // groupBoxS
             // 
@@ -326,6 +292,7 @@ namespace Thesis
             this.textBoxS1.Name = "textBoxS1";
             this.textBoxS1.Size = new System.Drawing.Size(25, 25);
             this.textBoxS1.TabIndex = 1;
+            this.textBoxS1.Text = "3";
             // 
             // textBoxS3
             // 
@@ -333,6 +300,7 @@ namespace Thesis
             this.textBoxS3.Name = "textBoxS3";
             this.textBoxS3.Size = new System.Drawing.Size(25, 25);
             this.textBoxS3.TabIndex = 7;
+            this.textBoxS3.Text = "7";
             // 
             // textBoxS2
             // 
@@ -340,18 +308,19 @@ namespace Thesis
             this.textBoxS2.Name = "textBoxS2";
             this.textBoxS2.Size = new System.Drawing.Size(25, 25);
             this.textBoxS2.TabIndex = 4;
+            this.textBoxS2.Text = "9";
             // 
             // groupBoxA
             // 
-            this.groupBoxA.Controls.Add(this.textBox5);
-            this.groupBoxA.Controls.Add(this.textBox8);
+            this.groupBoxA.Controls.Add(this.textBoxA23);
+            this.groupBoxA.Controls.Add(this.textBoxA33);
             this.groupBoxA.Controls.Add(this.textBoxA11);
-            this.groupBoxA.Controls.Add(this.textBox7);
-            this.groupBoxA.Controls.Add(this.textBox1);
-            this.groupBoxA.Controls.Add(this.textBox6);
-            this.groupBoxA.Controls.Add(this.textBox2);
-            this.groupBoxA.Controls.Add(this.textBox3);
-            this.groupBoxA.Controls.Add(this.textBox4);
+            this.groupBoxA.Controls.Add(this.textBoxA32);
+            this.groupBoxA.Controls.Add(this.textBoxA12);
+            this.groupBoxA.Controls.Add(this.textBoxA31);
+            this.groupBoxA.Controls.Add(this.textBoxA13);
+            this.groupBoxA.Controls.Add(this.textBoxA21);
+            this.groupBoxA.Controls.Add(this.textBoxA22);
             this.groupBoxA.Location = new System.Drawing.Point(6, 24);
             this.groupBoxA.Name = "groupBoxA";
             this.groupBoxA.Size = new System.Drawing.Size(94, 112);
@@ -359,19 +328,21 @@ namespace Thesis
             this.groupBoxA.TabStop = false;
             this.groupBoxA.Text = "Matrix A";
             // 
-            // textBox5
+            // textBoxA23
             // 
-            this.textBox5.Location = new System.Drawing.Point(61, 49);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(25, 25);
-            this.textBox5.TabIndex = 6;
+            this.textBoxA23.Location = new System.Drawing.Point(61, 49);
+            this.textBoxA23.Name = "textBoxA23";
+            this.textBoxA23.Size = new System.Drawing.Size(25, 25);
+            this.textBoxA23.TabIndex = 6;
+            this.textBoxA23.Text = "1";
             // 
-            // textBox8
+            // textBoxA33
             // 
-            this.textBox8.Location = new System.Drawing.Point(61, 75);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(25, 25);
-            this.textBox8.TabIndex = 9;
+            this.textBoxA33.Location = new System.Drawing.Point(61, 75);
+            this.textBoxA33.Name = "textBoxA33";
+            this.textBoxA33.Size = new System.Drawing.Size(25, 25);
+            this.textBoxA33.TabIndex = 9;
+            this.textBoxA33.Text = "5";
             // 
             // textBoxA11
             // 
@@ -379,53 +350,60 @@ namespace Thesis
             this.textBoxA11.Name = "textBoxA11";
             this.textBoxA11.Size = new System.Drawing.Size(25, 25);
             this.textBoxA11.TabIndex = 1;
+            this.textBoxA11.Text = "5";
             // 
-            // textBox7
+            // textBoxA32
             // 
-            this.textBox7.Location = new System.Drawing.Point(35, 75);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(25, 25);
-            this.textBox7.TabIndex = 8;
+            this.textBoxA32.Location = new System.Drawing.Point(35, 75);
+            this.textBoxA32.Name = "textBoxA32";
+            this.textBoxA32.Size = new System.Drawing.Size(25, 25);
+            this.textBoxA32.TabIndex = 8;
+            this.textBoxA32.Text = "4";
             // 
-            // textBox1
+            // textBoxA12
             // 
-            this.textBox1.Location = new System.Drawing.Point(35, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(25, 25);
-            this.textBox1.TabIndex = 2;
+            this.textBoxA12.Location = new System.Drawing.Point(35, 23);
+            this.textBoxA12.Name = "textBoxA12";
+            this.textBoxA12.Size = new System.Drawing.Size(25, 25);
+            this.textBoxA12.TabIndex = 2;
+            this.textBoxA12.Text = "4";
             // 
-            // textBox6
+            // textBoxA31
             // 
-            this.textBox6.Location = new System.Drawing.Point(9, 75);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(25, 25);
-            this.textBox6.TabIndex = 7;
+            this.textBoxA31.Location = new System.Drawing.Point(9, 75);
+            this.textBoxA31.Name = "textBoxA31";
+            this.textBoxA31.Size = new System.Drawing.Size(25, 25);
+            this.textBoxA31.TabIndex = 7;
+            this.textBoxA31.Text = "2";
             // 
-            // textBox2
+            // textBoxA13
             // 
-            this.textBox2.Location = new System.Drawing.Point(61, 23);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(25, 25);
-            this.textBox2.TabIndex = 3;
+            this.textBoxA13.Location = new System.Drawing.Point(61, 23);
+            this.textBoxA13.Name = "textBoxA13";
+            this.textBoxA13.Size = new System.Drawing.Size(25, 25);
+            this.textBoxA13.TabIndex = 3;
+            this.textBoxA13.Text = "6";
             // 
-            // textBox3
+            // textBoxA21
             // 
-            this.textBox3.Location = new System.Drawing.Point(9, 49);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(25, 25);
-            this.textBox3.TabIndex = 4;
+            this.textBoxA21.Location = new System.Drawing.Point(9, 49);
+            this.textBoxA21.Name = "textBoxA21";
+            this.textBoxA21.Size = new System.Drawing.Size(25, 25);
+            this.textBoxA21.TabIndex = 4;
+            this.textBoxA21.Text = "2";
             // 
-            // textBox4
+            // textBoxA22
             // 
-            this.textBox4.Location = new System.Drawing.Point(35, 49);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(25, 25);
-            this.textBox4.TabIndex = 5;
+            this.textBoxA22.Location = new System.Drawing.Point(35, 49);
+            this.textBoxA22.Name = "textBoxA22";
+            this.textBoxA22.Size = new System.Drawing.Size(25, 25);
+            this.textBoxA22.TabIndex = 5;
+            this.textBoxA22.Text = "3";
             // 
             // buttonCleanText
             // 
             this.buttonCleanText.Font = new System.Drawing.Font("Gadugi", 9.75F);
-            this.buttonCleanText.Location = new System.Drawing.Point(300, 322);
+            this.buttonCleanText.Location = new System.Drawing.Point(300, 162);
             this.buttonCleanText.Name = "buttonCleanText";
             this.buttonCleanText.Size = new System.Drawing.Size(92, 47);
             this.buttonCleanText.TabIndex = 9;
@@ -435,7 +413,7 @@ namespace Thesis
             // buttonCleanAll
             // 
             this.buttonCleanAll.Font = new System.Drawing.Font("Gadugi", 9.75F);
-            this.buttonCleanAll.Location = new System.Drawing.Point(412, 322);
+            this.buttonCleanAll.Location = new System.Drawing.Point(412, 162);
             this.buttonCleanAll.Name = "buttonCleanAll";
             this.buttonCleanAll.Size = new System.Drawing.Size(92, 47);
             this.buttonCleanAll.TabIndex = 10;
@@ -444,36 +422,45 @@ namespace Thesis
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.buttonHash);
-            this.panel2.Controls.Add(this.textBoxHash);
-            this.panel2.Location = new System.Drawing.Point(12, 390);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.panelResult);
+            this.panel2.Location = new System.Drawing.Point(12, 223);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(492, 110);
+            this.panel2.Size = new System.Drawing.Size(663, 108);
             this.panel2.TabIndex = 11;
-            // 
-            // buttonHash
-            // 
-            this.buttonHash.Location = new System.Drawing.Point(6, 3);
-            this.buttonHash.Name = "buttonHash";
-            this.buttonHash.Size = new System.Drawing.Size(253, 29);
-            this.buttonHash.TabIndex = 1;
-            this.buttonHash.Text = "Hash";
-            this.buttonHash.UseVisualStyleBackColor = true;
-            this.buttonHash.Click += new System.EventHandler(this.buttonHash_Click);
             // 
             // textBoxHash
             // 
-            this.textBoxHash.Location = new System.Drawing.Point(6, 38);
+            this.textBoxHash.Location = new System.Drawing.Point(6, 16);
             this.textBoxHash.Multiline = true;
             this.textBoxHash.Name = "textBoxHash";
-            this.textBoxHash.Size = new System.Drawing.Size(253, 64);
+            this.textBoxHash.Size = new System.Drawing.Size(247, 80);
             this.textBoxHash.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.labelHash);
+            this.panel3.Controls.Add(this.textBoxHash);
+            this.panel3.Location = new System.Drawing.Point(6, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(256, 99);
+            this.panel3.TabIndex = 9;
+            // 
+            // labelHash
+            // 
+            this.labelHash.AutoSize = true;
+            this.labelHash.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHash.Location = new System.Drawing.Point(3, 0);
+            this.labelHash.Name = "labelHash";
+            this.labelHash.Size = new System.Drawing.Size(44, 16);
+            this.labelHash.TabIndex = 2;
+            this.labelHash.Text = "HASH:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 509);
+            this.ClientSize = new System.Drawing.Size(687, 340);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.buttonCleanAll);
             this.Controls.Add(this.buttonCleanText);
@@ -488,7 +475,6 @@ namespace Thesis
             this.panelOriginal.ResumeLayout(false);
             this.panelOriginal.PerformLayout();
             this.groupBoxKeys.ResumeLayout(false);
-            this.groupBoxKeys.PerformLayout();
             this.groupBoxUserKeys.ResumeLayout(false);
             this.groupBoxUserKeys.PerformLayout();
             this.groupBoxG.ResumeLayout(false);
@@ -500,7 +486,8 @@ namespace Thesis
             this.groupBoxA.ResumeLayout(false);
             this.groupBoxA.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -517,8 +504,6 @@ namespace Thesis
         private System.Windows.Forms.Panel panelResult;
         private System.Windows.Forms.Panel panelOriginal;
         private System.Windows.Forms.GroupBox groupBoxKeys;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxB;
         private System.Windows.Forms.GroupBox groupBoxUserKeys;
         private System.Windows.Forms.Label Nblabel1;
         private System.Windows.Forms.Label labelNa;
@@ -529,27 +514,26 @@ namespace Thesis
         private System.Windows.Forms.TextBox textBoxG1;
         private System.Windows.Forms.GroupBox groupBoxP;
         private System.Windows.Forms.TextBox textBoxP;
-        private System.Windows.Forms.TextBox textBoxC;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBoxS;
         private System.Windows.Forms.TextBox textBoxS1;
         private System.Windows.Forms.TextBox textBoxS3;
         private System.Windows.Forms.TextBox textBoxS2;
         private System.Windows.Forms.GroupBox groupBoxA;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBoxA23;
+        private System.Windows.Forms.TextBox textBoxA33;
         private System.Windows.Forms.TextBox textBoxA11;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxA32;
+        private System.Windows.Forms.TextBox textBoxA12;
+        private System.Windows.Forms.TextBox textBoxA31;
+        private System.Windows.Forms.TextBox textBoxA13;
+        private System.Windows.Forms.TextBox textBoxA21;
+        private System.Windows.Forms.TextBox textBoxA22;
         private System.Windows.Forms.Button buttonCleanText;
         private System.Windows.Forms.Button buttonCleanAll;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button buttonHash;
         private System.Windows.Forms.TextBox textBoxHash;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label labelHash;
     }
 }
 
