@@ -21,7 +21,7 @@ namespace Thesis
         {
             string originalText = textBoxOriginal.Text.ToUpper().Replace(" ", ""); ;
 
-            string alphabet = "0123456789ABCDEF.,x";
+            string alphabet = "0123456789abcdef.,x";
             //string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ.,'";
             int.TryParse(textBoxA11.Text, out int A11); //a11=5
             int.TryParse(textBoxA12.Text, out int A12); //a12=4
@@ -68,7 +68,7 @@ namespace Thesis
         {
             string originalText = textBoxOriginal.Text.ToUpper().Trim();
 
-            string alphabet = "0123456789ABCDEF.,x";
+            string alphabet = "0123456789abcdef.,x";
 
             int.TryParse(textBoxA11.Text, out int A11); //a11=5
             int.TryParse(textBoxA12.Text, out int A12); //a12=4
@@ -102,5 +102,14 @@ namespace Thesis
             textBoxResult.Text = outputAffine;
         }
 
+        private void buttonCleanText_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelOriginal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -8,3 +8,23 @@ D:\Документы\programs\THESIS\Thesis\Thesis\obj\Debug\Thesis.csproj.Gene
 D:\Документы\programs\THESIS\Thesis\Thesis\obj\Debug\Thesis.csproj.CoreCompileInputs.cache
 D:\Документы\programs\THESIS\Thesis\Thesis\obj\Debug\Thesis.exe
 D:\Документы\programs\THESIS\Thesis\Thesis\obj\Debug\Thesis.pdb
+D:\OneDrive-Yulia\OneDrive - Uniwersytet Wrocławski\Yulia\Documents\programs\THESIS\Thesis\Thesis\bin\Debug\Thesis.exe.config
+D:\OneDrive-Yulia\OneDrive - Uniwersytet Wrocławski\Yulia\Documents\programs\THESIS\Thesis\Thesis\bin\Debug\Thesis.exe
+D:\OneDrive-Yulia\OneDrive - Uniwersytet Wrocławski\Yulia\Documents\programs\THESIS\Thesis\Thesis\bin\Debug\Thesis.pdb
+D:\OneDrive-Yulia\OneDrive - Uniwersytet Wrocławski\Yulia\Documents\programs\THESIS\Thesis\Thesis\obj\Debug\Thesis.csprojAssemblyReference.cache
+D:\OneDrive-Yulia\OneDrive - Uniwersytet Wrocławski\Yulia\Documents\programs\THESIS\Thesis\Thesis\obj\Debug\Thesis.Form1.resources
+D:\OneDrive-Yulia\OneDrive - Uniwersytet Wrocławski\Yulia\Documents\programs\THESIS\Thesis\Thesis\obj\Debug\Thesis.Properties.Resources.resources
+D:\OneDrive-Yulia\OneDrive - Uniwersytet Wrocławski\Yulia\Documents\programs\THESIS\Thesis\Thesis\obj\Debug\Thesis.csproj.GenerateResource.cache
+D:\OneDrive-Yulia\OneDrive - Uniwersytet Wrocławski\Yulia\Documents\programs\THESIS\Thesis\Thesis\obj\Debug\Thesis.csproj.CoreCompileInputs.cache
+D:\OneDrive-Yulia\OneDrive - Uniwersytet Wrocławski\Yulia\Documents\programs\THESIS\Thesis\Thesis\obj\Debug\Thesis.exe
+D:\OneDrive-Yulia\OneDrive - Uniwersytet Wrocławski\Yulia\Documents\programs\THESIS\Thesis\Thesis\obj\Debug\Thesis.pdb
+D:\Documents\programs\THESIS\Thesis\Thesis\bin\Debug\Thesis.exe.config
+D:\Documents\programs\THESIS\Thesis\Thesis\bin\Debug\Thesis.exe
+D:\Documents\programs\THESIS\Thesis\Thesis\bin\Debug\Thesis.pdb
+D:\Documents\programs\THESIS\Thesis\Thesis\obj\Debug\Thesis.csproj.AssemblyReference.cache
+D:\Documents\programs\THESIS\Thesis\Thesis\obj\Debug\Thesis.Form1.resources
+D:\Documents\programs\THESIS\Thesis\Thesis\obj\Debug\Thesis.Properties.Resources.resources
+D:\Documents\programs\THESIS\Thesis\Thesis\obj\Debug\Thesis.csproj.GenerateResource.cache
+D:\Documents\programs\THESIS\Thesis\Thesis\obj\Debug\Thesis.csproj.CoreCompileInputs.cache
+D:\Documents\programs\THESIS\Thesis\Thesis\obj\Debug\Thesis.exe
+D:\Documents\programs\THESIS\Thesis\Thesis\obj\Debug\Thesis.pdb

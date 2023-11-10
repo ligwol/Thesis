@@ -66,9 +66,9 @@ namespace Thesis
             this.buttonCleanText = new System.Windows.Forms.Button();
             this.buttonCleanAll = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBoxHash = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.labelHash = new System.Windows.Forms.Label();
+            this.textBoxHash = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panelResult.SuspendLayout();
             this.panelOriginal.SuspendLayout();
@@ -88,9 +88,10 @@ namespace Thesis
             this.labelOriginal.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelOriginal.Location = new System.Drawing.Point(3, 0);
             this.labelOriginal.Name = "labelOriginal";
-            this.labelOriginal.Size = new System.Drawing.Size(84, 16);
+            this.labelOriginal.Size = new System.Drawing.Size(87, 16);
             this.labelOriginal.TabIndex = 0;
-            this.labelOriginal.Text = "PUT IN TEXT:";
+            this.labelOriginal.Text = "ДОКУМЕНТ:";
+            this.labelOriginal.Click += new System.EventHandler(this.labelOriginal_Click);
             // 
             // textBoxOriginal
             // 
@@ -114,29 +115,29 @@ namespace Thesis
             this.labelResult.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelResult.Location = new System.Drawing.Point(3, 0);
             this.labelResult.Name = "labelResult";
-            this.labelResult.Size = new System.Drawing.Size(55, 16);
+            this.labelResult.Size = new System.Drawing.Size(93, 16);
             this.labelResult.TabIndex = 2;
-            this.labelResult.Text = "RESULT:";
+            this.labelResult.Text = "РЕЗУЛЬТАТ:";
             // 
             // buttonCypher
             // 
             this.buttonCypher.Font = new System.Drawing.Font("Gadugi", 9.75F);
             this.buttonCypher.Location = new System.Drawing.Point(6, 150);
             this.buttonCypher.Name = "buttonCypher";
-            this.buttonCypher.Size = new System.Drawing.Size(92, 47);
+            this.buttonCypher.Size = new System.Drawing.Size(107, 47);
             this.buttonCypher.TabIndex = 4;
-            this.buttonCypher.Text = "Cypher";
+            this.buttonCypher.Text = "Зашифровать";
             this.buttonCypher.UseVisualStyleBackColor = true;
             this.buttonCypher.Click += new System.EventHandler(this.buttonCypher_Click);
             // 
             // buttonDecypher
             // 
             this.buttonDecypher.Font = new System.Drawing.Font("Gadugi", 9.75F);
-            this.buttonDecypher.Location = new System.Drawing.Point(167, 150);
+            this.buttonDecypher.Location = new System.Drawing.Point(150, 150);
             this.buttonDecypher.Name = "buttonDecypher";
-            this.buttonDecypher.Size = new System.Drawing.Size(92, 47);
+            this.buttonDecypher.Size = new System.Drawing.Size(109, 47);
             this.buttonDecypher.TabIndex = 5;
-            this.buttonDecypher.Text = "Decypher";
+            this.buttonDecypher.Text = "Дешифровать";
             this.buttonDecypher.UseVisualStyleBackColor = true;
             this.buttonDecypher.Click += new System.EventHandler(this.buttonDecypher_Click);
             // 
@@ -180,7 +181,7 @@ namespace Thesis
             this.groupBoxKeys.Size = new System.Drawing.Size(375, 144);
             this.groupBoxKeys.TabIndex = 8;
             this.groupBoxKeys.TabStop = false;
-            this.groupBoxKeys.Text = "KEYS";
+            this.groupBoxKeys.Text = "КЛЮЧИ";
             // 
             // groupBoxUserKeys
             // 
@@ -193,14 +194,14 @@ namespace Thesis
             this.groupBoxUserKeys.Size = new System.Drawing.Size(172, 63);
             this.groupBoxUserKeys.TabIndex = 20;
             this.groupBoxUserKeys.TabStop = false;
-            this.groupBoxUserKeys.Text = "User keys";
+            this.groupBoxUserKeys.Text = "Ключи пользователя";
             // 
             // Nblabel1
             // 
             this.Nblabel1.AutoSize = true;
             this.Nblabel1.Location = new System.Drawing.Point(90, 28);
             this.Nblabel1.Name = "Nblabel1";
-            this.Nblabel1.Size = new System.Drawing.Size(22, 16);
+            this.Nblabel1.Size = new System.Drawing.Size(21, 16);
             this.Nblabel1.TabIndex = 15;
             this.Nblabel1.Text = "nB";
             // 
@@ -209,7 +210,7 @@ namespace Thesis
             this.labelNa.AutoSize = true;
             this.labelNa.Location = new System.Drawing.Point(10, 28);
             this.labelNa.Name = "labelNa";
-            this.labelNa.Size = new System.Drawing.Size(23, 16);
+            this.labelNa.Size = new System.Drawing.Size(22, 16);
             this.labelNa.TabIndex = 14;
             this.labelNa.Text = "nA";
             // 
@@ -284,7 +285,7 @@ namespace Thesis
             this.groupBoxS.Size = new System.Drawing.Size(71, 112);
             this.groupBoxS.TabIndex = 11;
             this.groupBoxS.TabStop = false;
-            this.groupBoxS.Text = "Vector S";
+            this.groupBoxS.Text = "Вектор";
             // 
             // textBoxS1
             // 
@@ -326,7 +327,7 @@ namespace Thesis
             this.groupBoxA.Size = new System.Drawing.Size(94, 112);
             this.groupBoxA.TabIndex = 10;
             this.groupBoxA.TabStop = false;
-            this.groupBoxA.Text = "Matrix A";
+            this.groupBoxA.Text = "Матрица";
             // 
             // textBoxA23
             // 
@@ -407,8 +408,9 @@ namespace Thesis
             this.buttonCleanText.Name = "buttonCleanText";
             this.buttonCleanText.Size = new System.Drawing.Size(92, 47);
             this.buttonCleanText.TabIndex = 9;
-            this.buttonCleanText.Text = "CleanText";
+            this.buttonCleanText.Text = "Очистить текст";
             this.buttonCleanText.UseVisualStyleBackColor = true;
+            this.buttonCleanText.Click += new System.EventHandler(this.buttonCleanText_Click);
             // 
             // buttonCleanAll
             // 
@@ -417,7 +419,7 @@ namespace Thesis
             this.buttonCleanAll.Name = "buttonCleanAll";
             this.buttonCleanAll.Size = new System.Drawing.Size(92, 47);
             this.buttonCleanAll.TabIndex = 10;
-            this.buttonCleanAll.Text = "Clean All";
+            this.buttonCleanAll.Text = "Очистить все поля";
             this.buttonCleanAll.UseVisualStyleBackColor = true;
             // 
             // panel2
@@ -428,14 +430,6 @@ namespace Thesis
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(663, 108);
             this.panel2.TabIndex = 11;
-            // 
-            // textBoxHash
-            // 
-            this.textBoxHash.Location = new System.Drawing.Point(6, 16);
-            this.textBoxHash.Multiline = true;
-            this.textBoxHash.Name = "textBoxHash";
-            this.textBoxHash.Size = new System.Drawing.Size(247, 80);
-            this.textBoxHash.TabIndex = 0;
             // 
             // panel3
             // 
@@ -452,9 +446,17 @@ namespace Thesis
             this.labelHash.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHash.Location = new System.Drawing.Point(3, 0);
             this.labelHash.Name = "labelHash";
-            this.labelHash.Size = new System.Drawing.Size(44, 16);
+            this.labelHash.Size = new System.Drawing.Size(39, 16);
             this.labelHash.TabIndex = 2;
-            this.labelHash.Text = "HASH:";
+            this.labelHash.Text = "ХЭШ:";
+            // 
+            // textBoxHash
+            // 
+            this.textBoxHash.Location = new System.Drawing.Point(6, 16);
+            this.textBoxHash.Multiline = true;
+            this.textBoxHash.Name = "textBoxHash";
+            this.textBoxHash.Size = new System.Drawing.Size(247, 80);
+            this.textBoxHash.TabIndex = 0;
             // 
             // Form1
             // 
@@ -468,7 +470,7 @@ namespace Thesis
             this.Controls.Add(this.panelOriginal);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "ЦИФРОВАЯ ПОДПИСЬ";
             this.panel1.ResumeLayout(false);
             this.panelResult.ResumeLayout(false);
             this.panelResult.PerformLayout();

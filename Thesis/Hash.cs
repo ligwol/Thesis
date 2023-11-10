@@ -123,11 +123,11 @@ namespace Thesis
                     }
                 }
             }
-            h[0] = Mod(Mod(A, 256) + Mod(a, 256), 256);
-            h[1] = Mod(Mod(B, 256) + Mod(b, 256), 256);
-            h[2] = Mod(Mod(C, 256) + Mod(c, 256), 256);
-            h[3] = Mod(Mod(D, 256) + Mod(d, 256), 256);
-            h[4] = Mod(Mod(E, 256) + Mod(e, 256), 256);
+            h[0] = Mod(Mod(A, 127) + Mod(a, 127), 127);
+            h[1] = Mod(Mod(B, 127) + Mod(b, 127), 127);
+            h[2] = Mod(Mod(C, 127) + Mod(c, 127), 127);
+            h[3] = Mod(Mod(D, 127) + Mod(d, 127), 127);
+            h[4] = Mod(Mod(E, 127) + Mod(e, 127), 127);
                         
             for (uint i = 0; i < blockNumbers; i++)
             {
@@ -144,11 +144,11 @@ namespace Thesis
                 }
             }
 
-            h[5] = Mod(Mod(A, 256) + Mod(a, 256), 256);
-            h[6] = Mod(Mod(B, 256) + Mod(b, 256), 256);
-            h[7] = Mod(Mod(C, 256) + Mod(c, 256), 256);
-            h[8] = Mod(Mod(D, 256) + Mod(d, 256), 256);
-            h[9] = Mod(Mod(E, 256) + Mod(e, 256), 256);
+            h[5] = Mod(Mod(A, 127) + Mod(a, 127), 127);
+            h[6] = Mod(Mod(B, 127) + Mod(b, 127), 127);
+            h[7] = Mod(Mod(C, 127) + Mod(c, 127), 127);
+            h[8] = Mod(Mod(D, 127) + Mod(d, 127), 127);
+            h[9] = Mod(Mod(E, 127) + Mod(e, 127), 127);
 
             for (uint i = 0; i < blockNumbers; i++)
             {
@@ -165,11 +165,11 @@ namespace Thesis
                 }
             }
 
-            h[10] = Mod(Mod(A, 256) + Mod(a, 256), 256);
-            h[11] = Mod(Mod(B, 256) + Mod(b, 256), 256);
-            h[12] = Mod(Mod(C, 256) + Mod(c, 256), 256);
-            h[13] = Mod(Mod(D, 256) + Mod(d, 256), 256);
-            h[14] = Mod(Mod(E, 256) + Mod(e, 256), 256);
+            h[10] = Mod(Mod(A, 127) + Mod(a, 127), 127);
+            h[11] = Mod(Mod(B, 127) + Mod(b, 127), 127);
+            h[12] = Mod(Mod(C, 127) + Mod(c, 127), 127);
+            h[13] = Mod(Mod(D, 127) + Mod(d, 127), 127);
+            h[14] = Mod(Mod(E, 127) + Mod(e, 127), 127);
 
             for (uint i = 0; i < blockNumbers; i++)
             {
@@ -186,11 +186,11 @@ namespace Thesis
                 }
             }
 
-            h[15] = Mod(Mod(A, 256) + Mod(a, 256), 256);
-            h[16] = Mod(Mod(B, 256) + Mod(b, 256), 256);
-            h[17] = Mod(Mod(C, 256) + Mod(c, 256), 256);
-            h[18] = Mod(Mod(D, 256) + Mod(d, 256), 256);
-            h[19] = Mod(Mod(E, 256) + Mod(e, 256), 256);
+            h[15] = Mod(Mod(A, 127) + Mod(a, 127), 127);
+            h[16] = Mod(Mod(B, 127) + Mod(b, 127), 127);
+            h[17] = Mod(Mod(C, 127) + Mod(c, 127), 127);
+            h[18] = Mod(Mod(D, 127) + Mod(d, 127), 127);
+            h[19] = Mod(Mod(E, 127) + Mod(e, 127), 127);
             //
             //Вывод двумерного массива с числами в текстовый файл
             //StreamWriter sw = new StreamWriter("d:\\array.txt");
